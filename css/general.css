@@ -3,3 +3,21 @@
     src: url('../assets/fonts/VictorMonoAll/TTF/VictorMono-MediumItalic.ttf')
         format('truetype');
 }
+
+button:hover {
+    opacity: 0.9;
+}
+
+div:hover {
+    opacity: 0.9;
+}
+
+.bg-vid {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -100;
+}

@@ -23,7 +23,7 @@ function create() {
     let nav = document.getElementById('nav');
     nav.className = 'nav-bar';
 
-    let doh2 = create_content('h2', '', '', 'Donate Comebacks!');
+    let doh2 = create_content('h2', '', '', 'DONATE');
     let doa = create_content(
         'a',
         'text-decoration: none;',
@@ -40,7 +40,7 @@ function create() {
     let lodiv = create_div('nav-element logo', logo);
     lodiv.setAttribute('onclick', 'home_page()');
 
-    let abh2 = create_content('h2', '', '', 'About');
+    let abh2 = create_content('h2', '', '', 'ABOUT');
     let aba = create_content(
         'a',
         'text-decoration: none;',

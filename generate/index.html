@@ -9,14 +9,15 @@
     </head>
     <body>
         <div id="nav"></div>
-        
         <video muted loop autoplay class="bg-vid">
             <source src="../assets/videos/fire.mp4" type="video/mp4" />
             Your browser does not support the video tag.
         </video>
 
-        <div class="cb-cont">
-            <h2 class="cb" id="cb">Generating Comeback...</h2>
+        <div class="cb-cont" id="cb-cont" onclick="another()">
+            <h1 id="cb-lvl">Generating Comeback...</h1>
+            <h2 class="cb" id="cb"></h2>
+            <h6>Press for another comeback.</h6>
         </div>
 
         <script src="script.js"></script>

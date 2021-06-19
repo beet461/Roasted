@@ -3,9 +3,9 @@ body {
 }
 
 .generate {
-    width: 500px;
-    height: 200px;
-    font-size: 75px;
+    width: 600px;
+    height: 150px;
+    font-size: 50px;
     border-radius: 100px;
     border: 3px solid red;
     background-color: orange;

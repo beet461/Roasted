@@ -23,11 +23,11 @@ function create() {
     let nav = document.getElementById('nav');
     nav.className = 'nav-bar';
 
-    let doh2 = create_content('h2', '', '', 'DONATE');
+    let doh2 = create_content('h2', '', '', 'GENERATE');
     let doa = create_content(
         'a',
         'text-decoration: none;',
-        '../donate/index.html',
+        '../generate/index.html',
         ''
     );
     doa.appendChild(doh2);

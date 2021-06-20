@@ -1,5 +1,5 @@
 function home_page() {
-    window.location.href = '../index.html';
+    window.location.href = 'beet461.github.io/Roasted/index.html';
 }
 
 function create_content(elem, eclass, ehref, ehtml) {
@@ -27,7 +27,7 @@ function create() {
     let doa = create_content(
         'a',
         'text-decoration: none;',
-        '../generate/index.html',
+        '.beet461.github.io/Roasted/generate/index.htl',
         ''
     );
     doa.appendChild(doh2);

@@ -37,6 +37,7 @@ function create() {
     let spacer2 = create_div('nav-element spacer', '');
 
     let logo = document.createElement('img');
+    logo.src = '../assets/images/logo_transparent.gif';
     let lodiv = create_div('nav-element logo', logo);
     lodiv.setAttribute('onclick', 'home_page()');
 

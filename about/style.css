@@ -1,3 +1,45 @@
 body {
-    font-family: 'Website Font';
+    font-family: 'Website Font Thin';
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.25;
+    }
+    to {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 0.75;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.about-cont {
+    position: absolute;
+    left: 50%;
+    margin-left: -500px;
+    height: 700px;
+    width: 1000px;
+    text-align: center;
+    animation-name: fade-in;
+    animation-duration: 4s;
+}
+
+.header {
+    color: rgb(179, 179, 179);
+    text-decoration: underline;
+}
+
+.body {
+    color: white;
+}
+
+.back-home {
+    color: white;
 }

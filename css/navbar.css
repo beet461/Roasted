@@ -11,7 +11,14 @@
 
 .logo {
     flex-grow: 2;
-    background-color: rgb(172, 228, 186);
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+div:hover {
+    opacity: 0.9;
 }
 
 .nav-element {

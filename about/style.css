@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'RM';
+    src: url('../assets/fonts/RobotoMono-Regular.ttf');
+}
+
 @keyframes fade-in {
     from {
         opacity: 0;
@@ -17,6 +22,7 @@
 }
 
 .about-cont {
+    font-family: 'RM';
     position: absolute;
     left: 50%;
     margin-left: -500px;
@@ -34,7 +40,6 @@
 
 .body {
     color: white;
-    font-family: 'Website Font';
 }
 
 .back-home {

@@ -36,7 +36,7 @@ function item(parent, parentClass, child, childClass, childHtml, onclick) {
 function create() {
     item(generateDiv, 'nav-element end-divs', generateButton, 'generate-button', 'GENERATE', function () { window.location.href = href('generate/index.html') })
 
-    logoImage.src = '../assets/images/logo_transparent.gif'
+    logoImage.src = href('assets/images/logo_transparent.gif');
     item(logoDiv, 'nav-element logo', logoImage, '', '', function () { window.location.href = href('') })
 
     item(aboutDiv, 'nav-element end-divs', aboutButton, 'about-button', 'ABOUT', function () { window.location.href = href('about/index.html') })

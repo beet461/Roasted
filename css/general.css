@@ -1,12 +1,6 @@
 @font-face {
     font-family: 'Website Font';
-    src: url('../assets/fonts/TTF/VictorMono-MediumItalic.ttf')
-        format('truetype');
-}
-
-@font-face {
-    font-family: 'Website Font Thin';
-    src: url('../assets/fonts/TTF/VictorMono-ThinItalic.ttf') format('truetype');
+    src: url('../assets/fonts/hot_font_extra.ttf') format('truetype');
 }
 
 .bg-vid {

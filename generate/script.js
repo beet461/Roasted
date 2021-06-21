@@ -66,6 +66,8 @@ unintelligent
 stupid
 disrespectful`;
 
+//all of these are roasts
+
 const lvl4 = lvl4_raw.split('\n');
 const lvl3 = lvl3_raw.split('\n');
 const lvl2 = lvl2_raw.split('\n');

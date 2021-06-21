@@ -1,61 +1,53 @@
-function home_page() {
-    window.location.href = 'beet461.github.io/Roasted/index.html';
-}
+var generateDiv = document.createElement('div');
+var generateButton = document.createElement('button');
 
-function create_content(elem, eclass, ehref, ehtml) {
-    var element = document.createElement(elem);
-    element.style = eclass;
-    element.href = ehref;
-    element.innerHTML = ehtml;
-    return element;
-}
+var spacer = document.createElement('div')
+spacer.className = 'nav-element spacer'
 
-function create_div(eclass, content) {
-    var div = document.createElement('div');
-    div.className = eclass;
-    if (content != '') {
-        div.appendChild(content);
+var logoDiv = document.createElement('div');
+var logoImage = document.createElement('img');
+
+var spacer2 = document.createElement('div')
+spacer2.className = 'nav-element spacer'
+
+var aboutDiv = document.createElement('div');
+var aboutButton = document.createElement('button');
+
+function href(place) {
+    let hostName = window.location.hostname;
+    let currentHref = window.location.href.split(
+        `https://${hostName}/Roasted/`
+    );
+    if (currentHref[1] === '') {
+        return `./${place}`;
+    } else if (currentHref[1] !== '') {
+        return `../${place}`;
     }
-    return div;
+}
+
+function item(parent, parentClass, child, childClass, childHtml, onclick) {
+    parent.className = parentClass
+    child.innerHTML = childHtml
+    child.className = childClass
+    child.onclick = onclick
+    parent.appendChild(child)
 }
 
 function create() {
-    let nav = document.getElementById('nav');
-    nav.className = 'nav-bar';
+    item(generateDiv, 'nav-element end-divs', generateButton, 'generate-button', 'GENERATE', function () { window.location.href = href('generate/index.html') })
 
-    let doh2 = create_content('h2', '', '', 'GENERATE');
-    let doa = create_content(
-        'a',
-        'text-decoration: none;',
-        '.beet461.github.io/Roasted/generate/index.htl',
-        ''
-    );
-    doa.appendChild(doh2);
-    let dodiv = create_div('nav-element donate', doa);
+    logoImage.src = '../assets/images/logo_transparent.gif'
+    item(logoDiv, 'nav-element logo', logoImage, '', '', function () { window.location.href = href('') })
 
-    let spacer = create_div('nav-element spacer', '');
-    let spacer2 = create_div('nav-element spacer', '');
+    item(aboutDiv, 'nav-element end-divs', aboutButton, 'about-button', 'ABOUT', function () { window.location.href = href('about/index.html') })
 
-    let logo = document.createElement('img');
-    logo.src = '../assets/images/logo_transparent.gif';
-    let lodiv = create_div('nav-element logo', logo);
-    lodiv.setAttribute('onclick', 'home_page()');
-
-    let abh2 = create_content('h2', '', '', 'ABOUT');
-    let aba = create_content(
-        'a',
-        'text-decoration: none;',
-        '../about/index.html',
-        ''
-    );
-    aba.appendChild(abh2);
-    let abdiv = create_div('nav-element about', aba);
-
-    nav.appendChild(dodiv);
+    var nav = document.getElementById('nav')
+    nav.className = 'nav-bar'
+    nav.appendChild(generateDiv);
     nav.appendChild(spacer);
-    nav.appendChild(lodiv);
+    nav.appendChild(logoDiv);
     nav.appendChild(spacer2);
-    nav.appendChild(abdiv);
+    nav.appendChild(aboutDiv);
 }
 
 create();

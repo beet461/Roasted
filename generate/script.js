@@ -73,6 +73,8 @@ const lvl3 = lvl3_raw.split('\n');
 const lvl2 = lvl2_raw.split('\n');
 const lvl1 = lvl1_raw.split('\n');
 
+var bg_vid = document.getElementById('bg-vid-src');
+
 function position() {
     var page = document.documentElement;
     var cbCont = document.getElementById('cb-cont');
@@ -81,6 +83,11 @@ function position() {
     cbCont.style.top = `${page.clientHeight / 2 - 100}px`;
 }
 position();
+
+function changeBgVid(newVid) {
+    bg_vid.src = `../assets/videos/${newVid}.mp4`;
+    document.getElementsByTagName('video')[0].load();
+}
 
 function generate() {
     var lvl = Math.ceil(Math.random() * 4);
@@ -103,11 +110,17 @@ function generate() {
             document.getElementById('cb-lvl').innerHTML = 'Level: EPIC';
             break;
     }
+
+    setTimeout(function () {
+        changeBgVid('fire_edges');
+    }, 4000);
 }
 
 function another() {
     document.getElementById('cb-lvl').innerHTML = 'Generating Comeback...';
     document.getElementById('cb').innerHTML = '';
+
+    changeBgVid('fireball_explosion');
     setTimeout(function () {
         document.getElementById('cb-lvl').innerHTML = '';
         generate();

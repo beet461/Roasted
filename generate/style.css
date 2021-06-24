@@ -2,9 +2,15 @@ body {
     font-family: 'Website Font';
 }
 
+@font-face {
+    font-family: 'blazed';
+    src: url('../assets/fonts/Blazed.ttf');
+}
+
 .cb-cont {
+    font-family: 'blazed';
     text-align: center;
-    opacity: 0.75;
+    opacity: 0.8;
     width: 1000px;
     height: 200px;
     border-radius: 50px;

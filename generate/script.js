@@ -64,7 +64,13 @@ go away
 weakling
 unintelligent
 stupid
-disrespectful`;
+disrespectful
+annoying
+irritation
+small brain
+dumb
+i am smarter than you
+`;
 
 //all of these are roasts
 
@@ -84,8 +90,18 @@ function position() {
 }
 position();
 
+var lvl = Math.ceil(Math.random() * 4);
+
+function cb_timeout() {
+    document.getElementById('cb-lvl').innerHTML = 'Generating Comeback...';
+    document.getElementById('cb').innerHTML = '';
+    setTimeout(function () {
+        document.getElementById('cb-lvl').innerHTML = '';
+        generate();
+    }, 1000);
+}
+
 function generate() {
-    var lvl = Math.ceil(Math.random() * 4);
     var cb = document.getElementById('cb');
     switch (lvl) {
         case 1:
@@ -107,16 +123,4 @@ function generate() {
     }
 }
 
-function another() {
-    document.getElementById('cb-lvl').innerHTML = 'Generating Comeback...';
-    document.getElementById('cb').innerHTML = '';
-    setTimeout(function () {
-        document.getElementById('cb-lvl').innerHTML = '';
-        generate();
-    }, 1000);
-}
-
-setTimeout(function () {
-    document.getElementById('cb-lvl').innerHTML = '';
-    generate();
-}, 1000);
+cb_timeout();

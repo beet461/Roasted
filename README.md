@@ -9,6 +9,6 @@ If you want to contribute, either go to our [discord server](https://discord.gg/
 | TODO         | Status |
 | ------------ | ------ |
 | Media Links  | ✓      |
-| Level Choice |        |
+| Level Choice | ✓      |
 | Premium      |        |
 | Ads          |        |

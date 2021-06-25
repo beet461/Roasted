@@ -70,7 +70,8 @@ irritation
 small brain
 dumb
 i am smarter than you
-`;
+rude
+unpleasant`;
 
 //all of these are roasts
 
@@ -91,6 +92,7 @@ function position() {
 position();
 
 var lvl = Math.ceil(Math.random() * 4);
+var previous_insult;
 
 function cb_timeout() {
     document.getElementById('cb-lvl').innerHTML = 'Generating Comeback...';
@@ -101,23 +103,32 @@ function cb_timeout() {
     }, 1000);
 }
 
+function cb_generate(lvl) {
+    let cb = lvl[Math.floor(Math.random() * lvl.length)];
+    if (cb !== previous_insult) {
+        return cb;
+    } else {
+        return cb_generate(lvl);
+    }
+}
+
 function generate() {
     var cb = document.getElementById('cb');
     switch (lvl) {
         case 1:
-            cb.innerHTML = lvl1[Math.floor(Math.random() * lvl1.length)];
+            previous_insult = cb.innerHTML = cb_generate(lvl1);
             document.getElementById('cb-lvl').innerHTML = 'Level: weak';
             break;
         case 2:
-            cb.innerHTML = lvl2[Math.floor(Math.random() * lvl2.length)];
+            previous_insult = cb.innerHTML = cb_generate(lvl2);
             document.getElementById('cb-lvl').innerHTML = 'Level: Witty';
             break;
         case 3:
-            cb.innerHTML = lvl3[Math.floor(Math.random() * lvl3.length)];
+            previous_insult = cb.innerHTML = cb_generate(lvl3);
             document.getElementById('cb-lvl').innerHTML = 'Level: Amazing';
             break;
         case 4:
-            cb.innerHTML = lvl4[Math.floor(Math.random() * lvl4.length)];
+            previous_insult = cb.innerHTML = cb_generate(lvl4);
             document.getElementById('cb-lvl').innerHTML = 'Level: EPIC';
             break;
     }

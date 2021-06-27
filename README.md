@@ -10,5 +10,6 @@ If you want to contribute, either go to our [discord server](https://discord.gg/
 | ------------ | ------ |
 | Media Links  | ✓      |
 | Level Choice | ✓      |
+| Attributions | ✓      |
 | Premium      |        |
 | Ads          |        |

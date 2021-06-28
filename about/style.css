@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'RM';
-    src: url('../assets/fonts/RobotoMono-Regular.ttf');
+    font-family: 'VM';
+    src: url('../assets/fonts/VictorMono-Thin.ttf');
 }
 
 @keyframes fade-in {
@@ -22,7 +22,7 @@
 }
 
 .about-cont {
-    font-family: 'RM';
+    font-family: 'VM';
     position: absolute;
     left: 50%;
     margin-left: -500px;
@@ -44,4 +44,14 @@
 
 .back-home {
     color: white;
+}
+
+.logos {
+    width: 75px;
+    height: 75px;
+}
+
+.link {
+    text-decoration: none;
+    color: rgb(214, 243, 160);
 }

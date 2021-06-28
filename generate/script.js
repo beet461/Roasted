@@ -64,7 +64,14 @@ go away
 weakling
 unintelligent
 stupid
-disrespectful`;
+disrespectful
+annoying
+irritation
+small brain
+dumb
+i am smarter than you
+rude
+unpleasant`;
 
 //all of these are roasts
 
@@ -72,6 +79,8 @@ const lvl4 = lvl4_raw.split('\n');
 const lvl3 = lvl3_raw.split('\n');
 const lvl2 = lvl2_raw.split('\n');
 const lvl1 = lvl1_raw.split('\n');
+
+var bg_vid = document.getElementById('bg-vid-src');
 
 function position() {
     var page = document.documentElement;
@@ -82,30 +91,10 @@ function position() {
 }
 position();
 
-function generate() {
-    var lvl = Math.ceil(Math.random() * 4);
-    var cb = document.getElementById('cb');
-    switch (lvl) {
-        case 1:
-            cb.innerHTML = lvl1[Math.floor(Math.random() * lvl1.length)];
-            document.getElementById('cb-lvl').innerHTML = 'Level: weak';
-            break;
-        case 2:
-            cb.innerHTML = lvl2[Math.floor(Math.random() * lvl2.length)];
-            document.getElementById('cb-lvl').innerHTML = 'Level: Witty';
-            break;
-        case 3:
-            cb.innerHTML = lvl3[Math.floor(Math.random() * lvl3.length)];
-            document.getElementById('cb-lvl').innerHTML = 'Level: Amazing';
-            break;
-        case 4:
-            cb.innerHTML = lvl4[Math.floor(Math.random() * lvl4.length)];
-            document.getElementById('cb-lvl').innerHTML = 'Level: EPIC';
-            break;
-    }
-}
+var lvl = Math.ceil(Math.random() * 4);
+var previous_insult;
 
-function another() {
+function cb_timeout() {
     document.getElementById('cb-lvl').innerHTML = 'Generating Comeback...';
     document.getElementById('cb').innerHTML = '';
     setTimeout(function () {
@@ -114,7 +103,35 @@ function another() {
     }, 1000);
 }
 
-setTimeout(function () {
-    document.getElementById('cb-lvl').innerHTML = '';
-    generate();
-}, 1000);
+function cb_generate(lvl) {
+    let cb = lvl[Math.floor(Math.random() * lvl.length)];
+    if (cb !== previous_insult) {
+        return cb;
+    } else {
+        return cb_generate(lvl);
+    }
+}
+
+function generate() {
+    var cb = document.getElementById('cb');
+    switch (lvl) {
+        case 1:
+            previous_insult = cb.innerHTML = cb_generate(lvl1);
+            document.getElementById('cb-lvl').innerHTML = 'Level: weak';
+            break;
+        case 2:
+            previous_insult = cb.innerHTML = cb_generate(lvl2);
+            document.getElementById('cb-lvl').innerHTML = 'Level: Witty';
+            break;
+        case 3:
+            previous_insult = cb.innerHTML = cb_generate(lvl3);
+            document.getElementById('cb-lvl').innerHTML = 'Level: Amazing';
+            break;
+        case 4:
+            previous_insult = cb.innerHTML = cb_generate(lvl4);
+            document.getElementById('cb-lvl').innerHTML = 'Level: EPIC';
+            break;
+    }
+}
+
+cb_timeout();

@@ -2,12 +2,33 @@ body {
     font-family: 'Website Font';
 }
 
+@font-face {
+    font-family: 'blazed';
+    src: url('../assets/fonts/Blazed.ttf');
+}
+
+.level-button {
+    font-family: 'blazed';
+    padding-top: 10px;
+    border: 3px solid red;
+    border-radius: 25px;
+    background-color: orange;
+    width: 25%;
+    flex-grow: 1;
+}
+
 .cb-cont {
+    font-family: 'blazed';
     text-align: center;
-    opacity: 0.75;
+    opacity: 0.8;
     width: 1000px;
     height: 200px;
     border-radius: 50px;
     background-color: red;
     align-items: center;
+}
+
+.level-cont {
+    display: flex;
+    width: 1000px;
 }

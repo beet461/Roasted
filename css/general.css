@@ -3,6 +3,15 @@
     src: url('../assets/fonts/hot_font_extra.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Victor';
+    src: url('../assets/fonts/VictorMono-Thin.ttf');
+}
+
+.nav-font {
+    font-family: 'Website';
+}
+
 .bg-vid {
     object-fit: cover;
     width: 100vw;

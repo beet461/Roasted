@@ -21,11 +21,11 @@ button {
     flex-grow: 2;
 }
 
-button:hover {
+img:hover {
     opacity: 0.9;
 }
 
-div:hover {
+a:hover {
     opacity: 0.9;
 }
 

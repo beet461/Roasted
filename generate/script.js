@@ -34,7 +34,12 @@ I am returning your nose. I found it in my business.
 Good story, but in what chapter do you shut up?
 There are some remarkably dumb people in this world. Thanks for helping me understand that.
 You need a kiss on the neck from a crocodile.
-May both sides of your pillow be uncomfortably warm.`;
+May both sides of your pillow be uncomfortably warm.
+I love what you’ve done with your hair. How do you get it to come out of your nostrils like that?
+Remember that time you were saying that thing I didn’t care about? Yeah, that is now.
+I’m busy right now, can I ignore you another time?
+I wish I had a flip phone, so I could slam it shut on this conversation.
+Your secrets are always safe with me. I never even listen when you tell me them.`;
 
 const lvl2_raw = `You are like a cloud. When you disappear it’s a beautiful day.
 Child, I’ve forgotten more than you ever knew.
